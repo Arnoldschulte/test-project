@@ -1,4 +1,4 @@
-package Hooks;
+package hooks;
 
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
 import io.cucumber.java.After;
