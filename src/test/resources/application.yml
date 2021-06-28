@@ -1,0 +1,17 @@
+wiremock:
+  server:
+    host: localhost
+    port: 8080
+    standalone: false
+
+service:
+  frontend:
+    url: dummy
+  rest:
+    url: localhost
+    port: 8080
+
+selenide:
+  browser: firefox
+  downloadsfolder: target/downloads
+  reportsfolder: target/reports
