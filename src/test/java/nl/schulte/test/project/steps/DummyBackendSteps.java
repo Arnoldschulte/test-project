@@ -1,16 +1,16 @@
-package steps;
+package nl.schulte.test.project.steps;
 
 import com.github.tomakehurst.wiremock.http.HttpHeaders;
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
 import io.cucumber.java.nl.Als;
 import io.cucumber.java.nl.Dan;
 import io.cucumber.java.nl.Gegeven;
+import nl.schulte.test.project.service.MockService;
+import nl.schulte.test.project.service.RestService;
+import nl.schulte.test.project.state.State;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import service.MockService;
-import service.RestService;
-import state.State;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

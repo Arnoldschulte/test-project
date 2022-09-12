@@ -1,4 +1,4 @@
-package domain;
+package nl.schulte.test.project.domain;
 
 public class Number {
 

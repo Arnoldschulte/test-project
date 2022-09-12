@@ -1,12 +1,11 @@
-package steps;
+package nl.schulte.test.project.steps;
 
-import domain.Number;
 import io.cucumber.java.nl.Als;
 import io.cucumber.java.nl.Dan;
 import io.cucumber.java.nl.Gegeven;
+import nl.schulte.test.project.service.XmlParseService;
+import nl.schulte.test.project.state.State;
 import org.xml.sax.SAXException;
-import service.XmlParseService;
-import state.State;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;

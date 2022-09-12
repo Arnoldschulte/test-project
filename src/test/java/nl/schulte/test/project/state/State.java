@@ -1,6 +1,5 @@
-package state;
+package nl.schulte.test.project.state;
 
-import domain.Number;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

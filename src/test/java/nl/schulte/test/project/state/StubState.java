@@ -1,4 +1,4 @@
-package state;
+package nl.schulte.test.project.state;
 
 import com.github.tomakehurst.wiremock.stubbing.StubMapping;
 import org.slf4j.Logger;
@@ -20,14 +20,14 @@ public class StubState {
     public void addStub(StubMapping stubMapping) {
         stubs.add(stubMapping);
 
-        LOGGER.info("Stub toegevoegd aan state:\n[{}]", stubMapping);
+        LOGGER.info("Stub toegevoegd aan nl.schulte.test.project.state:\n[{}]", stubMapping);
     }
 
     public void clearStubs() {
         if (!stubs.isEmpty()) {
             stubs.clear();
 
-            LOGGER.info("Stubs verwijderd uit state");
+            LOGGER.info("Stubs verwijderd uit nl.schulte.test.project.state");
         }
     }
 
@@ -35,9 +35,9 @@ public class StubState {
         if (stubs.contains(stubMapping)) {
             stubs.remove(stubMapping);
 
-            LOGGER.info("Stub verwijderd uit state:\n[{}]", stubMapping);
+            LOGGER.info("Stub verwijderd uit nl.schulte.test.project.state:\n[{}]", stubMapping);
         } else {
-            LOGGER.error("De volgende stub niet gevonden in state:\n[{}]", stubMapping);
+            LOGGER.error("De volgende stub niet gevonden in nl.schulte.test.project.state:\n[{}]", stubMapping);
         }
     }
 

@@ -1,12 +1,10 @@
-package config;
+package nl.schulte.test.project.config;
 
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest(classes = {
-        TestConfig.class,
-        RestConfig.class,
-        StubConfig.class})
 @CucumberContextConfiguration
+@SpringBootTest(classes = TestConfig.class)
 public class CucumberSpringConfiguration {
+
 }

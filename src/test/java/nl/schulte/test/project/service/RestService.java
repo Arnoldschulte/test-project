@@ -1,4 +1,4 @@
-package service;
+package nl.schulte.test.project.service;
 
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;

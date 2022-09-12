@@ -1,4 +1,4 @@
-package service;
+package nl.schulte.test.project.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

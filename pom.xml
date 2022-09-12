@@ -21,7 +21,7 @@
         <java.version>17</java.version>
 
         <cucumber.version>7.7.0</cucumber.version>
-        <junit-vintage-engine.version>5.9.0</junit-vintage-engine.version>
+        <junit-platform.version>1.9.0</junit-platform.version>
         <wiremock.version>2.33.2</wiremock.version>
         <selenide.version>6.7.4</selenide.version>
 
@@ -55,7 +55,7 @@
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
+            <artifactId>cucumber-junit-platform-engine</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
@@ -67,9 +67,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.junit.vintage</groupId>
-            <artifactId>junit-vintage-engine</artifactId>
-            <version>${junit-vintage-engine.version}</version>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>${junit-platform.version}</version>
             <scope>test</scope>
         </dependency>
 

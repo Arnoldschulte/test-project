@@ -13,5 +13,6 @@ service:
 
 selenide:
   browser: firefox
+  headless: true
   downloadsfolder: target/downloads
   reportsfolder: target/reports

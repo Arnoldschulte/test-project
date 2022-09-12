@@ -1,4 +1,4 @@
-package state;
+package nl.schulte.test.project.state;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
