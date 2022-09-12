@@ -9,6 +9,7 @@
     <logger name="org.apache.http.headers" level="debug" />
     <logger name="o.s.web.client.RestTemplate" level="debug" />
     <logger name="com.codeborne.selenide" level="debug" />
+
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>

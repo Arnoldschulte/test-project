@@ -32,7 +32,6 @@ public class BrowserHooks {
         LOGGER.info("Setting up selenide configuration...");
         browser = selenideBrowser;
         baseUrl = serviceUrl;
-        startMaximized = true;
         headless = true;
         timeout = 10_000;
         downloadsFolder = selenideDownloadsFolder;
