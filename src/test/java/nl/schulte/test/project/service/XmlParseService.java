@@ -1,5 +1,6 @@
 package nl.schulte.test.project.service;
 
+import nl.schulte.test.project.domain.Number;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

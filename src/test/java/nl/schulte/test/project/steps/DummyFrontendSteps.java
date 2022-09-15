@@ -3,6 +3,7 @@ package nl.schulte.test.project.steps;
 import io.cucumber.java.nl.Als;
 import io.cucumber.java.nl.Dan;
 import io.cucumber.java.nl.Gegeven;
+import nl.schulte.test.project.domain.Number;
 import nl.schulte.test.project.service.XmlParseService;
 import nl.schulte.test.project.state.State;
 import org.xml.sax.SAXException;
