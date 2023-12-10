@@ -5,3 +5,4 @@ Opzet voor een testproject om gebruik te maken van:
 - Selenide
 - WireMock (Stubs)
 - Spring Boot (o.a. TestRestTemplate)
+- Allure (rapportage)
