@@ -38,7 +38,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: allure-results
-        path: ${{ vars.OUTPUT_PATH }}/allure-results
+        path: allure-results
         if-no-files-found: error
         retention-days: 5
         
