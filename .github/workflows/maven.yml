@@ -30,5 +30,5 @@ jobs:
     - name: Setup Firefox
       uses: browser-actions/setup-firefox@v1.4.0
     - name: Run test
-      run: mvn clean verify pom.xml
+      run: mvn clean verify --file pom.xml
             
