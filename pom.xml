@@ -25,6 +25,13 @@
         <wiremock.version>3.3.1</wiremock.version>
         <selenide.version>7.0.4</selenide.version>
 
+        <!-- Allure Reporting -->
+        <allure.version>2.25.0</allure.version>
+        <allure-maven.version>2.12.0</allure-maven.version>
+        <allure.results.directory>${project.build.directory}/allure/results</allure.results.directory>
+        <allure.report.directory>${project.build.directory}/allure/report</allure.report.directory>
+        <allure.install.directory>.allure</allure.install.directory>
+
         <!-- Maven Plugins -->
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -93,6 +100,26 @@
             <version>3.0.0-M1</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Allure Reporting -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-selenide</artifactId>
+            <version>${allure.version}</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.codeborne</groupId>
+                    <artifactId>selenide</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
 
     <build>
@@ -115,6 +142,9 @@
                     <failIfNoTests>false</failIfNoTests>
                     <testFailureIgnore>true</testFailureIgnore>
                     <workingDirectory>${project.build.directory}</workingDirectory>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${allure.results.directory}</allure.results.directory>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -123,6 +153,26 @@
                 <version>${maven-jar-plugin.version}</version>
                 <configuration>
                     <skipIfEmpty>true</skipIfEmpty>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure-maven.version}</version>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                    <installDirectory>${allure.install.directory}</installDirectory>
+                    <resultsDirectory>${allure.results.directory}</resultsDirectory>
+                    <reportDirectory>${allure.report.directory}</reportDirectory>
                 </configuration>
             </plugin>
         </plugins>
