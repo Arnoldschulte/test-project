@@ -34,11 +34,13 @@ jobs:
     - name: Run test
       run: mvn clean verify --file pom.xml
 
-    - uses: actions/upload-artifact@master
+    - name: Upload artifact [Allure Results] 
+      uses: actions/upload-artifact@master
       with:
         name: allure-results
         path: build/allure/results
-        retention-days: 20
+        if-no-files-found: error
+        retention-days: 5
         
     - name: Get Allure history
       uses: actions/checkout@v2
@@ -48,7 +50,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
 
-    - name: Allure Report action from marketplace
+    - name: Allure Report Action
       uses: simple-elf/allure-report-action@master
       if: always()
       id: allure-report
@@ -59,7 +61,7 @@ jobs:
         allure_history: allure-history
         keep_reports: 5
 
-    - name: Deploy report to Github Pages
+    - name: Deploy Allure Report to Github Pages
       if: always()
       uses: peaceiris/actions-gh-pages@v2
       env:
