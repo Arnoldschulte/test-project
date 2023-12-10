@@ -31,14 +31,13 @@ jobs:
       uses: browser-actions/setup-firefox@v1.4.0
     - name: Run test
       run: mvn clean verify --file pom.xml
-    - name: Allure Report action from marketplace
+    - name: Generate report
       uses: simple-elf/allure-report-action@master
       if: always()
-      #id: allure-report
+      id: allure-report
       with:
-        allure_results: allure-results
-          #gh_pages: gh-pages
-          #allure_report: allure-report
+        allure_results: build/allure/results
+        gh_pages: gh-pages
+        allure_report: build/allure/results
         allure_history: allure-history
-        keep_reports: 5
             
