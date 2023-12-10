@@ -29,7 +29,7 @@ public class MockService {
         this.objectMapper = objectMapper;
     }
 
-    public StubMapping stub(String url, HttpMethod httpMethod, Object requestBody, Object responseBody, HttpStatus httpStatus, HttpHeaders httpHeaders) {
+    public StubMapping stub(String url, String httpMethod, Object requestBody, Object responseBody, HttpStatus httpStatus, HttpHeaders httpHeaders) {
 //      TODO: Doe nog niks met requestBody
         final StubMapping stubMapping = wireMock.register(stub(url, httpMethod, responseBody, httpStatus.value(), httpHeaders));
         LOGGER.info("Volgende stub gemaakt: \n[{}]", stubMapping);
@@ -37,7 +37,7 @@ public class MockService {
         return stubMapping;
     }
 
-    private MappingBuilder stub(String url, HttpMethod httpMethod, Object responseBody, int status, HttpHeaders httpHeaders) {
+    private MappingBuilder stub(String url, String httpMethod, Object responseBody, int status, HttpHeaders httpHeaders) {
         return getMappingBuilder(httpMethod, url)
                 .atPriority(1)
                 .willReturn(aResponse()
@@ -47,19 +47,14 @@ public class MockService {
                 );
     }
 
-    private MappingBuilder getMappingBuilder(HttpMethod httpMethod, String url) {
-        switch (httpMethod) {
-            case GET:
-                return get(url);
-            case POST:
-                return post(url);
-            case PUT:
-                return put(url);
-            case DELETE:
-                return delete(url);
-            default:
-                throw new NotImplementedException("Following HTTP method for stub not implemented: " + httpMethod.name());
-        }
+    private MappingBuilder getMappingBuilder(String httpMethod, String url) {
+        return switch (httpMethod.toUpperCase()) {
+            case "GET" -> get(url);
+            case "POST" -> post(url);
+            case "PUT" -> put(url);
+            case "DELETE" -> delete(url);
+            default -> throw new NotImplementedException("Following HTTP method for stub not implemented: " + httpMethod);
+        };
     }
 
     private String getObjectAsString(Object object) {

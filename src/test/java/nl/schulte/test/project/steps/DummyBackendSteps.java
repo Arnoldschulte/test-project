@@ -52,7 +52,7 @@ public class DummyBackendSteps {
 
     @Gegeven("een dummy stub is aanwezig met de tekst {string}")
     public void eenDummyStubIsAanwezigMetDeTekstX(String tekst) {
-        final StubMapping stub = mockService.stub("/dummy", HttpMethod.GET, null, tekst, HttpStatus.OK, HttpHeaders.noHeaders());
+        final StubMapping stub = mockService.stub("/dummy", HttpMethod.GET.name(), null, tekst, HttpStatus.OK, HttpHeaders.noHeaders());
         state.getStubState().addStub(stub);
     }
 
