@@ -33,14 +33,6 @@ jobs:
     
     - name: Run test
       run: mvn clean verify --file pom.xml
-
-    - name: Upload artifact [Allure Results] 
-      uses: actions/upload-artifact@master
-      with:
-        name: allure-results
-        path: target/allure-results
-        if-no-files-found: error
-        retention-days: 5
         
     - name: Get Allure history
       uses: actions/checkout@v2
