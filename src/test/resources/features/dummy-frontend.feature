@@ -8,7 +8,9 @@ Functionaliteit: Dummy Frontend testen
     Gegeven ik ben op de Tricentis obstacle pagina
     Als ik naar obstacle 12952 ga
     En ik op de juiste knop klik
-    Dan zie ik een succesmelding
+#    Dan zie ik een succesmelding
+    Dan zie ik geen succesmelding
+#   TODO: Tijdelijk foutief scenario om screenshots in rapportage te testen
 
   @12952 @obstacleTwins
   Scenario: 2. Als dummy testproject wil ik de afwezigheid van een succesmelding kunnen valideren
