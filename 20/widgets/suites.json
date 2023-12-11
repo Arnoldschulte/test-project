@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"d13a0a4de6fd62233ecd4ec37b38dbe1","name":"Dummy Frontend testen","statistic":{"failed":0,"broken":0,"skipped":0,"passed":4,"unknown":0,"total":4}},{"uid":"02470f89d49eda2d72add3aae7243d98","name":"Dummy Backend testen","statistic":{"failed":0,"broken":0,"skipped":0,"passed":2,"unknown":0,"total":2}}]}
