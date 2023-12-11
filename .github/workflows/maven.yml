@@ -37,8 +37,8 @@ jobs:
     - name: Upload artifact [Allure Results] 
       uses: actions/upload-artifact@master
       with:
-        name: allure-report
-        path: target/allure-report
+        name: allure-results
+        path: target/allure-results
         if-no-files-found: error
         retention-days: 5
         
@@ -58,7 +58,7 @@ jobs:
         allure_results: target/allure-results
         gh_pages: gh-pages
         allure_report: target/allure-report
-        allure_history: target/allure-history
+        allure_history: allure-history
         keep_reports: 5
 
     - name: Deploy Allure Report to Github Pages
