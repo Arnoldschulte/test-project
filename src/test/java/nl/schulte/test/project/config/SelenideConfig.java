@@ -1,5 +1,7 @@
 package nl.schulte.test.project.config;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,5 +38,7 @@ public class SelenideConfig {
         com.codeborne.selenide.Configuration.downloadsFolder = selenideDownloadsFolder;
         com.codeborne.selenide.Configuration.reportsFolder = selenideReportsFolder;
         com.codeborne.selenide.Configuration.clickViaJs = false;
+
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
     }
 }
