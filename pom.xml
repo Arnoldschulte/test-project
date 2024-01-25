@@ -139,8 +139,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.version}</version>
                 <configuration>
-                    <failIfNoTests>false</failIfNoTests>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <failIfNoTests>true</failIfNoTests>
+                    <testFailureIgnore>false</testFailureIgnore>
                     <workingDirectory>${project.build.directory}</workingDirectory>
                     <systemPropertyVariables>
                         <allure.results.directory>${allure.results.directory}</allure.results.directory>
