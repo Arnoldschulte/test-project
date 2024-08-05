@@ -1,0 +1,7 @@
+"Epic","Feature","Story","FAILED","BROKEN","PASSED","SKIPPED","UNKNOWN"
+"","Dummy Frontend testen","3. Als tester wil ik een xml bestand kunnen downloaden en hier een waarde uithalen om in te vullen in de FE","0","0","1","0","0"
+"","Dummy Backend testen","1. Als dummy testproject wil ik een simpele rekensom oplossen","0","0","1","0","0"
+"","Dummy Frontend testen","4. Als tester wil ik het aantal opties uit een auto-complete veld tellen en versturen via de FE","1","0","0","0","0"
+"","Dummy Backend testen","2. Als dummy testproject wil ik een simpele stub maken en deze via REST valideren","0","0","1","0","0"
+"","Dummy Frontend testen","1. Als dummy testproject wil ik een simpele succesmelding kunnen valideren","0","0","1","0","0"
+"","Dummy Frontend testen","2. Als dummy testproject wil ik de afwezigheid van een succesmelding kunnen valideren","0","0","1","0","0"
