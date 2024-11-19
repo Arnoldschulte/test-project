@@ -97,14 +97,13 @@ public class DummyFrontendSteps {
     @Als("ik de zoekterm invul")
     public void ikDeZoektermInvul() {
         final String zoekterm = $("#typeThis").shouldBe(visible).getText();
-        $("input#s2id_autogen1").val(zoekterm);
+        $("input.select2-search__field").val(zoekterm);
     }
 
     @Dan("tel ik het aantal resultaten en verstuur deze")
     public void telIkHetAantalResultatenEnVerstuurDeze() {
-        $("#select2-drop").shouldBe(visible);
-        $(".select2-results").shouldBe(visible);
-        final int aantalResultaten = $$("li.select2-result").size();
+        $("#select2-autocomplete-results").shouldBe(visible);
+        final int aantalResultaten = $$("li.select2-results__option").size();
 
         $("input#entryCount").val(String.valueOf(aantalResultaten));
     }
