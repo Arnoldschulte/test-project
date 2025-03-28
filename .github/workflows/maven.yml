@@ -19,7 +19,7 @@ jobs:
           cache: maven
 
       - name: Setup Firefox
-        uses: browser-actions/setup-firefox@v1.5.2
+        uses: browser-actions/setup-firefox@v1
 
       - name: Run test
         run: mvn clean verify --file pom.xml
