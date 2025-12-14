@@ -23,7 +23,7 @@
         <cucumber.version>7.23.0</cucumber.version>
         <junit-platform.version>1.14.1</junit-platform.version>
         <wiremock.version>3.13.2</wiremock.version>
-        <selenide.version>7.12.3</selenide.version>
+        <selenide.version>7.13.0</selenide.version>
 
         <!-- Allure Reporting -->
         <allure.version>2.32.0</allure.version>
