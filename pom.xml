@@ -27,7 +27,7 @@
 
         <!-- Allure Reporting -->
         <allure.version>2.34.0</allure.version>
-        <allure-maven.version>2.18.0</allure-maven.version>
+        <allure-maven.version>3.0.3</allure-maven.version>
         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
         <allure.report.directory>${project.build.directory}/allure-report</allure.report.directory>
         <allure.install.directory>.allure</allure.install.directory>
